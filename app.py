@@ -71,7 +71,5 @@ if st.button("Посчитать", type="primary", use_container_width=True):
     st.subheader("А если у меня есть только N розыгрышей?")
     pull_options = st.slider("Сколько розыгрышей планируешь сделать?", 10, 300, p50)
     success_rate = (results <= pull_options).mean()
-    st.markdown(
-        f"Шанс набрать **{target_copies}** копий за **{pull_options}** розыгрышей: "
-        f"### {success_rate:.0%}"
-    )
+    st.markdown(f"Шанс набрать **{target_copies}** копий за **{pull_options}** розыгрышей:")
+    st.markdown(f"### {success_rate:.0%}")
